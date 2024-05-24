@@ -1,0 +1,78 @@
+createGroup:
+  path: '/v3/notesvr/set/notegroup'
+  mustKeys:
+    - groupId
+    - groupName
+  notMustKeys:
+    - remove
+  bodyBase: {}
+  exceptBase: {}
+
+deleteGroup:
+  path: '/v3/notestr/set/notegroup'
+  mustKeys:
+    - groupId
+    - groupName
+  notMustKeys:
+    - remove
+  bodyBase: {}
+  exceptBase: {}
+
+
+deleteNote:
+  path: '/v3/notesvr/delete'
+  mustKeys:
+    - noteId: ["kkjlkjfkjdkdjkkjfkjdkjfdkjjfkjhdkjfhjdhfjdhjhfjdhjhfkdhkjfhjkjdfjkj","@#￥%……&*（","我是中国人",null]
+  notMustKeys:
+  bodyBase: {}
+  exceptBase: {}
+
+getNotePage:
+  mustKeys:
+    - startindex: [99999999999999999999,0,-1,2147483648,-2147483649,1.555,"1",'']
+  notMustKeys:
+  bodyBase: {}
+  exceptBase: {}
+
+createNote:
+  mustKeys:
+    - noteId: ["kkjlkjfkjdkdjkkjfkjdkjfdkjjfkjhdkjfhjdhfjdhjhfjdhjhfkdhkjfhjkjdfjkj","@#￥%……&*（","我是中国人",null]
+  notMustKeys:
+  bodyBase: {}
+  exceptBase: {}
+
+getNoteContent:
+  mustKeys:
+    - noteIds: [null,None]
+
+  notMustKeys:
+  bodyBase: {}
+  exceptBase: {}
+
+createCalendar:
+  mustKeys:
+    - noteId: ["kkjlkjfkjdkdjkkjfkjdkjfdkjjfkjhdkjfhjdhfjdhjhfjdhjhfkdhkjfhjkjdfjkj","@#￥%……&*（","我是中国人",null]
+  notMustKeys:
+  bodyBase: {}
+  exceptBase: {}
+
+getCalendarNote:
+  mustKeys:
+    - remindStartTime: [99999999999999999999,0,-1,2147483648,-2147483649,1.555,"1",""]
+  notMustKeys:
+  bodyBase: {}
+  exceptBase: {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

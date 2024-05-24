@@ -1,0 +1,719 @@
+[INFO]14:30:50:018-logsmethod.py:51 >> Class Name:CreateCalendarHandle
+[INFO]14:30:50:022-logsmethod.py:52 >> Method Name:testCase01_limit
+[INFO]14:30:50:028-logsmethod.py:53 >> Test Description:新建日历便签内容主流程 
+[STEP]14:30:50:033-test_handle.py:32 >> 前置新建日历便签主体
+[INFO]14:30:50:038-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:30:50:044-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:30:50:049-apire.py:34 >> 【requests】body:{'noteId': '1716532250033_noteId', 'star': 0, 'remindTime': 1714708259, 'remindType': 1}
+[INFO]14:30:50:542-apire.py:40 >> 【response】code:200
+[INFO]14:30:50:557-apire.py:41 >> 【response】body:{"responseTime":48,"infoVersion":1,"infoUpdateTime":1716532252197}
+[STEP]14:30:50:563-test_handle.py:42 >> 新建日历便签内容
+[INFO]14:30:50:568-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:30:50:573-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=djkfjjfkdjkf', 'X-User-Key': '1204284213'}
+[INFO]14:30:50:579-apire.py:34 >> 【requests】body:{'noteId': '1716532250033_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:30:50:977-apire.py:40 >> 【response】code:401
+[INFO]14:30:50:983-apire.py:41 >> 【response】body:{"errorCode":-2010,"errorMsg":""}
+[INFO]14:30:52:084-logsmethod.py:51 >> Class Name:CreateCalendarMajor
+[INFO]14:30:52:089-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:30:52:095-logsmethod.py:53 >> Test Description:新建日历便签内容主流程 
+[STEP]14:30:52:100-test_major.py:24 >> 前置新建日历便签主体
+[INFO]14:30:52:106-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:30:52:112-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:30:52:118-apire.py:34 >> 【requests】body:{'noteId': '1716532252102_noteId', 'star': 0, 'remindTime': 1714708259, 'remindType': 1}
+[INFO]14:30:52:951-apire.py:40 >> 【response】code:200
+[INFO]14:30:52:956-apire.py:41 >> 【response】body:{"responseTime":33,"infoVersion":1,"infoUpdateTime":1716532254518}
+[STEP]14:30:52:961-test_major.py:38 >> 新建日历便签内容
+[INFO]14:30:52:966-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:30:52:971-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:30:52:976-apire.py:34 >> 【requests】body:{'noteId': '1716532252102_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:30:55:112-apire.py:40 >> 【response】code:200
+[INFO]14:30:55:117-apire.py:41 >> 【response】body:{"responseTime":40,"contentVersion":1,"contentUpdateTime":1716532256786}
+[INFO]14:30:56:033-logsmethod.py:51 >> Class Name:GetCalendarHandle
+[INFO]14:30:56:038-logsmethod.py:52 >> Method Name:testCase01_limit
+[INFO]14:30:56:043-logsmethod.py:53 >> Test Description:权限校验：未授权用户是否能够删除A用户的便签
+[STEP]14:30:56:048-test_handle.py:29 >> 前置构建一条日历便签
+[STEP]14:30:56:943-test_handle.py:31 >> 查看日历下便签
+[INFO]14:30:56:949-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/web/getnotes/remind
+[INFO]14:30:56:954-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=djkfjjfkdjkf', 'X-User-Key': '1204284213'}
+[INFO]14:30:56:959-apire.py:34 >> 【requests】body:{'remindStartTime': 1714535459, 'remindEndTime': 1714967459, 'startIndex': 0, 'rows': 10}
+[INFO]14:30:57:380-apire.py:40 >> 【response】code:401
+[INFO]14:30:57:385-apire.py:41 >> 【response】body:{"errorCode":-2010,"errorMsg":""}
+[INFO]14:30:58:242-logsmethod.py:51 >> Class Name:GetCalendarInput
+[INFO]14:30:58:246-logsmethod.py:52 >> Method Name:testCase01_starttime
+[INFO]14:30:58:251-logsmethod.py:53 >> Test Description:查看日历下便签，必填项校验: remindstarttime为 空 
+[STEP]14:30:58:256-test_input.py:51 >> 前置构建1条日历便签数据
+[STEP]14:30:59:144-test_input.py:54 >> 查看日历下便签
+[INFO]14:30:59:149-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/web/getnotes/remind
+[INFO]14:30:59:155-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:30:59:160-apire.py:34 >> 【requests】body:{'remindStartTime': None, 'remindEndTime': 1714967459, 'startIndex': 0, 'rows': 10}
+[INFO]14:30:59:544-apire.py:40 >> 【response】code:412
+[INFO]14:30:59:550-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"remindTime Requested!"}
+[INFO]14:31:00:446-logsmethod.py:51 >> Class Name:GetCalendarInput
+[INFO]14:31:00:450-logsmethod.py:52 >> Method Name:testCase02_endtime
+[INFO]14:31:00:455-logsmethod.py:53 >> Test Description:查看日历下便签，必填项校验: remindendtime为 空 
+[STEP]14:31:00:459-test_input.py:77 >> 前置构建1条日历便签数据
+[STEP]14:31:01:360-test_input.py:80 >> 查看日历下便签
+[INFO]14:31:01:364-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/web/getnotes/remind
+[INFO]14:31:01:370-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:01:375-apire.py:34 >> 【requests】body:{'remindStartTime': 1714535459, 'remindEndTime': None, 'startIndex': 0, 'rows': 10}
+[INFO]14:31:01:760-apire.py:40 >> 【response】code:412
+[INFO]14:31:01:765-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"remindTime Requested!"}
+[INFO]14:31:03:973-logsmethod.py:51 >> Class Name:GetCalendarInput
+[INFO]14:31:03:977-logsmethod.py:52 >> Method Name:testCase03_startindex
+[INFO]14:31:03:982-logsmethod.py:53 >> Test Description:查看日历下便签，必填项校验: startindex为 空 
+[STEP]14:31:03:987-test_input.py:99 >> 前置构建1条日历便签数据
+[STEP]14:31:05:393-test_input.py:102 >> 查看日历下便签
+[INFO]14:31:05:398-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/web/getnotes/remind
+[INFO]14:31:05:403-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:05:408-apire.py:34 >> 【requests】body:{'remindStartTime': 1714535459, 'remindEndTime': 1714967459, 'startIndex': None, 'rows': 10}
+[INFO]14:31:05:947-apire.py:40 >> 【response】code:200
+[INFO]14:31:05:953-apire.py:41 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716020372891_noteId","createTime":1716020372628,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716020372628,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716020372718},{"noteId":"1716020459134_noteId","createTime":1716020458834,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716020458834,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716020458915},{"noteId":"1716022660184_noteId","createTime":1716022660467,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716022660467,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716022661158},{"noteId":"1716022956090_noteId","createTime":1716022956192,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716022956192,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716022956304},{"noteId":"1716023054297_noteId","createTime":1716023054580,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023054580,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023054700},{"noteId":"1716023080934_noteId","createTime":1716023081054,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023081054,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023081244},{"noteId":"1716023151291_noteId","createTime":1716023151644,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023151644,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023151750},{"noteId":"1716023260213_noteId","createTime":1716023260630,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023260630,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023261017},{"noteId":"1716023628185_noteId","createTime":1716023628292,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023628292,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023628576},{"noteId":"1716023750312_noteId","createTime":1716023750496,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023750496,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023750674}]}
+[INFO]14:31:07:845-logsmethod.py:51 >> Class Name:GetCalendarInput
+[INFO]14:31:07:849-logsmethod.py:52 >> Method Name:testCase04_row
+[INFO]14:31:07:854-logsmethod.py:53 >> Test Description:查看日历下便签，必填项校验: rows为 空 
+[STEP]14:31:07:859-test_input.py:121 >> 前置构建1条日历便签数据
+[STEP]14:31:09:724-test_input.py:124 >> 查看日历下便签
+[INFO]14:31:09:729-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/web/getnotes/remind
+[INFO]14:31:09:735-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:09:739-apire.py:34 >> 【requests】body:{'remindStartTime': 1714535459, 'remindEndTime': 1714967459, 'startIndex': 0, 'rows': None}
+[INFO]14:31:10:197-apire.py:40 >> 【response】code:200
+[INFO]14:31:10:202-apire.py:41 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716020372891_noteId","createTime":1716020372628,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716020372628,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716020372718},{"noteId":"1716020459134_noteId","createTime":1716020458834,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716020458834,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716020458915},{"noteId":"1716022660184_noteId","createTime":1716022660467,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716022660467,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716022661158},{"noteId":"1716022956090_noteId","createTime":1716022956192,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716022956192,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716022956304},{"noteId":"1716023054297_noteId","createTime":1716023054580,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023054580,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023054700},{"noteId":"1716023080934_noteId","createTime":1716023081054,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023081054,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023081244},{"noteId":"1716023151291_noteId","createTime":1716023151644,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023151644,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023151750},{"noteId":"1716023260213_noteId","createTime":1716023260630,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023260630,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023261017},{"noteId":"1716023628185_noteId","createTime":1716023628292,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023628292,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023628576},{"noteId":"1716023750312_noteId","createTime":1716023750496,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023750496,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023750674},{"noteId":"1716023989587_noteId","createTime":1716023989705,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023989705,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023989784},{"noteId":"1716024072665_noteId","createTime":1716024072895,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716024072895,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716024072980},{"noteId":"1716024174723_noteId","createTime":1716024174913,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716024174913,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716024175014},{"noteId":"1716024692917_noteId","createTime":1716024693053,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716024693053,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716024693126},{"noteId":"1716024804617_noteId","createTime":1716024804742,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716024804742,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716024804835},{"noteId":"1716024821683_noteId","createTime":1716024821853,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716024821853,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716024821982},{"noteId":"1716024858441_noteId","createTime":1716024858650,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716024858650,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716024858858},{"noteId":"1716024915813_noteId","createTime":1716024915930,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716024915930,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716024916022},{"noteId":"1716024966674_noteId","createTime":1716024966929,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716024966929,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716024967027},{"noteId":"1716025044469_noteId","createTime":1716025044625,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025044625,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025044696},{"noteId":"1716025045076_noteId","createTime":1716025045198,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025045198,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025045317},{"noteId":"1716025045674_noteId","createTime":1716025045838,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025045838,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025045921},{"noteId":"1716025046358_noteId","createTime":1716025046496,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025046496,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025046594},{"noteId":"1716203403850_noteId","createTime":1716203404076,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203404076,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203404217},{"noteId":"1716203473655_noteId","createTime":1716203473843,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203473843,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203473906},{"noteId":"1716203594605_noteId","createTime":1716203594833,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203594833,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203594898},{"noteId":"1716203617258_noteId","createTime":1716203617434,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203617434,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203617534},{"noteId":"1716203674878_noteId","createTime":1716203675051,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203675051,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203675130},{"noteId":"1716203766910_noteId","createTime":1716203767101,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203767101,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203767154},{"noteId":"1716203823826_noteId","createTime":1716203824016,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203824016,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203824114},{"noteId":"1716203849270_noteId","createTime":1716203849502,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203849502,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203849566},{"noteId":"1716204122181_noteId","createTime":1716204122426,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716204122426,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716204122610},{"noteId":"1716207425356_noteId","createTime":1716207425557,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716207425557,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716207425614},{"noteId":"1716277901103_noteId","createTime":1716277902948,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716277902948,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716277903732},{"noteId":"1716277905259_noteId","createTime":1716277907744,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716277907744,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716277908398},{"noteId":"1716278528874_noteId","createTime":1716278530482,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716278530482,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716278533118},{"noteId":"1716278652765_noteId","createTime":1716278654378,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716278654378,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716278657150},{"noteId":"1716278660348_noteId","createTime":1716278662056,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716278662056,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716278663076},{"noteId":"1716285028023_noteId","createTime":1716285030475,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716285030475,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716285034956},{"noteId":"1716285037459_noteId","createTime":1716285037931,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716285037931,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716285040587},{"noteId":"1716285046893_noteId","createTime":1716285052173,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716285052173,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716285053155},{"noteId":"1716285937556_noteId","createTime":1716285937459,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716285937459,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716285937571},{"noteId":"1716285938008_noteId","createTime":1716285937877,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716285937877,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716285937963},{"noteId":"1716285938552_noteId","createTime":1716285938444,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716285938444,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716285938512},{"noteId":"1716287167231_noteId","createTime":1716287167147,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716287167147,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716287167307},{"noteId":"1716287167679_noteId","createTime":1716287167560,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716287167560,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716287167636},{"noteId":"1716287168118_noteId","createTime":1716287168008,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716287168008,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716287168095},{"noteId":"1716354040616_noteId","createTime":1716354041089,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716354041089,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716354041228},{"noteId":"1716354041155_noteId","createTime":1716354041575,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716354041575,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716354041678},{"noteId":"1716354041685_noteId","createTime":1716354042113,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716354042113,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716354042204}]}
+[INFO]14:31:11:052-logsmethod.py:51 >> Class Name:GetCalendarMajor
+[INFO]14:31:11:057-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:31:11:061-logsmethod.py:53 >> Test Description:查看日历下便签主流程 
+[STEP]14:31:11:066-test_major.py:23 >> 前置构建一条日历便签
+[STEP]14:31:11:925-test_major.py:25 >> 查看日历下便签
+[INFO]14:31:11:930-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/web/getnotes/remind
+[INFO]14:31:11:936-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:11:941-apire.py:34 >> 【requests】body:{'remindStartTime': 1714535459, 'remindEndTime': 1714967459, 'startIndex': 0, 'rows': 10}
+[INFO]14:31:12:561-apire.py:40 >> 【response】code:200
+[INFO]14:31:12:566-apire.py:41 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716020372891_noteId","createTime":1716020372628,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716020372628,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716020372718},{"noteId":"1716020459134_noteId","createTime":1716020458834,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716020458834,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716020458915},{"noteId":"1716022660184_noteId","createTime":1716022660467,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716022660467,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716022661158},{"noteId":"1716022956090_noteId","createTime":1716022956192,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716022956192,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716022956304},{"noteId":"1716023054297_noteId","createTime":1716023054580,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023054580,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023054700},{"noteId":"1716023080934_noteId","createTime":1716023081054,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023081054,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023081244},{"noteId":"1716023151291_noteId","createTime":1716023151644,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023151644,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023151750},{"noteId":"1716023260213_noteId","createTime":1716023260630,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023260630,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023261017},{"noteId":"1716023628185_noteId","createTime":1716023628292,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023628292,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023628576},{"noteId":"1716023750312_noteId","createTime":1716023750496,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023750496,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023750674}]}
+[INFO]14:31:14:407-logsmethod.py:51 >> Class Name:CreateNoteHandle
+[INFO]14:31:14:411-logsmethod.py:52 >> Method Name:testCase01_limit
+[INFO]14:31:14:416-logsmethod.py:53 >> Test Description:权限校验：未授权用户是否能够删除A用户的便签
+[STEP]14:31:14:421-test_handle.py:33 >> 前置新建便签主体
+[INFO]14:31:14:426-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:31:14:431-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:14:437-apire.py:34 >> 【requests】body:{'noteId': '1716532274422_noteId'}
+[INFO]14:31:14:949-apire.py:40 >> 【response】code:200
+[INFO]14:31:14:955-apire.py:41 >> 【response】body:{"responseTime":25,"infoVersion":1,"infoUpdateTime":1716532276628}
+[STEP]14:31:14:959-test_handle.py:39 >> 新建便签内容
+[INFO]14:31:14:965-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:31:14:970-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=djkfjjfkdjkf', 'X-User-Key': '1204284213'}
+[INFO]14:31:14:976-apire.py:34 >> 【requests】body:{'noteId': '1716532274422_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:31:15:408-apire.py:40 >> 【response】code:401
+[INFO]14:31:15:414-apire.py:41 >> 【response】body:{"errorCode":-2010,"errorMsg":""}
+[INFO]14:31:16:358-logsmethod.py:51 >> Class Name:CreateNoteInput
+[INFO]14:31:16:363-logsmethod.py:52 >> Method Name:testCase01_empty_str
+[INFO]14:31:16:367-logsmethod.py:53 >> Test Description:新增便签内容，必填项校验noteid
+[STEP]14:31:16:373-test_input.py:29 >> 前置新建便签主体
+[INFO]14:31:16:378-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:31:16:383-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:16:389-apire.py:34 >> 【requests】body:{'noteId': '1716532276374_noteId'}
+[INFO]14:31:16:798-apire.py:40 >> 【response】code:200
+[INFO]14:31:16:803-apire.py:41 >> 【response】body:{"responseTime":38,"infoVersion":1,"infoUpdateTime":1716532278474}
+[STEP]14:31:16:808-test_input.py:39 >> 新建便签内容
+[INFO]14:31:16:813-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:31:16:819-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:16:824-apire.py:34 >> 【requests】body:{'noteId': '', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:31:17:208-apire.py:40 >> 【response】code:500
+[INFO]14:31:17:214-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"参数不合法！"}
+[INFO]14:31:18:190-logsmethod.py:51 >> Class Name:CreateNoteInput
+[INFO]14:31:18:195-logsmethod.py:52 >> Method Name:testCase02_empty_str
+[INFO]14:31:18:200-logsmethod.py:53 >> Test Description:新增便签内容，必填项校验title
+[STEP]14:31:18:205-test_input.py:56 >> 前置新建便签主体
+[INFO]14:31:18:210-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:31:18:215-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:18:220-apire.py:34 >> 【requests】body:{'noteId': '1716532278206_noteId'}
+[INFO]14:31:18:634-apire.py:40 >> 【response】code:200
+[INFO]14:31:18:639-apire.py:41 >> 【response】body:{"responseTime":34,"infoVersion":1,"infoUpdateTime":1716532280312}
+[STEP]14:31:18:644-test_input.py:66 >> 新建便签内容
+[INFO]14:31:18:649-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:31:18:655-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:18:660-apire.py:34 >> 【requests】body:{'noteId': '1716532278206_noteId', 'title': '', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:31:19:098-apire.py:40 >> 【response】code:200
+[INFO]14:31:19:104-apire.py:41 >> 【response】body:{"responseTime":46,"contentVersion":1,"contentUpdateTime":1716532280772}
+[INFO]14:31:21:433-logsmethod.py:51 >> Class Name:CreateNoteInput
+[INFO]14:31:21:437-logsmethod.py:52 >> Method Name:testCase03_empty_str
+[INFO]14:31:21:442-logsmethod.py:53 >> Test Description:新增便签内容，必填项校验summary
+[STEP]14:31:21:446-test_input.py:83 >> 前置新建便签主体
+[INFO]14:31:21:451-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:31:21:456-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:21:462-apire.py:34 >> 【requests】body:{'noteId': '1716532281447_noteId'}
+[INFO]14:31:21:930-apire.py:40 >> 【response】code:200
+[INFO]14:31:21:935-apire.py:41 >> 【response】body:{"responseTime":45,"infoVersion":1,"infoUpdateTime":1716532283599}
+[STEP]14:31:21:940-test_input.py:93 >> 新建便签内容
+[INFO]14:31:21:946-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:31:21:951-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:21:957-apire.py:34 >> 【requests】body:{'noteId': '1716532281447_noteId', 'title': 'test', 'summary': '', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:31:22:634-apire.py:40 >> 【response】code:200
+[INFO]14:31:22:639-apire.py:41 >> 【response】body:{"responseTime":39,"contentVersion":1,"contentUpdateTime":1716532284301}
+[INFO]14:31:26:293-logsmethod.py:51 >> Class Name:CreateNoteInput
+[INFO]14:31:26:298-logsmethod.py:52 >> Method Name:testCase05_datatype_0_kkjlkjfkjdkdjkkjfkjdkjfdkjjfkjhdkjfhjdhfjdhjhfjdhjhfkdhkjfhjkjdfjkj
+[INFO]14:31:26:302-logsmethod.py:53 >> Test Description:新增便签内容，必填项数据类型校验noteid [with noteid='kkjlkjfkjdkdjkkjfkjdkjfdkjjfkjh...jdhfjdhjhfjdhjhfkdhkjfhjkjdfjkj']
+[STEP]14:31:26:309-test_input.py:111 >> 前置新建便签主体
+[INFO]14:31:26:315-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:31:26:320-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:26:326-apire.py:34 >> 【requests】body:{'noteId': '1716532286310_noteId'}
+[INFO]14:31:26:834-apire.py:40 >> 【response】code:200
+[INFO]14:31:26:840-apire.py:41 >> 【response】body:{"responseTime":24,"infoVersion":1,"infoUpdateTime":1716532288512}
+[STEP]14:31:26:845-test_input.py:121 >> 新建便签内容
+[INFO]14:31:26:851-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:31:26:856-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:26:862-apire.py:34 >> 【requests】body:{'noteId': 'kkjlkjfkjdkdjkkjfkjdkjfdkjjfkjhdkjfhjdhfjdhjhfjdhjhfkdhkjfhjkjdfjkj', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:31:27:264-apire.py:40 >> 【response】code:500
+[INFO]14:31:27:269-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"参数不合法！"}
+[INFO]14:31:28:109-logsmethod.py:51 >> Class Name:CreateNoteInput
+[INFO]14:31:28:114-logsmethod.py:52 >> Method Name:testCase05_datatype_1__
+[INFO]14:31:28:118-logsmethod.py:53 >> Test Description:新增便签内容，必填项数据类型校验noteid [with noteid='@#￥%……&*（']
+[STEP]14:31:28:123-test_input.py:111 >> 前置新建便签主体
+[INFO]14:31:28:129-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:31:28:135-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:28:140-apire.py:34 >> 【requests】body:{'noteId': '1716532288124_noteId'}
+[INFO]14:31:28:615-apire.py:40 >> 【response】code:200
+[INFO]14:31:28:621-apire.py:41 >> 【response】body:{"responseTime":30,"infoVersion":1,"infoUpdateTime":1716532290293}
+[STEP]14:31:28:625-test_input.py:121 >> 新建便签内容
+[INFO]14:31:28:631-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:31:28:636-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:28:641-apire.py:34 >> 【requests】body:{'noteId': '@#￥%……&*（', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:31:29:077-apire.py:40 >> 【response】code:500
+[INFO]14:31:29:082-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"org.springframework.jdbc.UncategorizedSQLException: \n### Error querying database.  Cause: java.sql.SQLException: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='\n### The error may exist in class path resource [mapping/NoteContentMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: select contentVersion, contentUpdateTime from notecontent where userId = ? and noteId = ?\n### Cause: java.sql.SQLException: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='\n; uncategorized SQLException; SQL state [HY000]; error code [1267]; Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='; nested exception is java.sql.SQLException: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)\n\tat com.sun.proxy.$Proxy98.selectOne(Unknown Source)\n\tat org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)\n\tat org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:83)\n\tat org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)\n\tat com.sun.proxy.$Proxy104.checkNoteId(Unknown Source)\n\tat cn.wps.note.api.NoteApi.setNoteContent(NoteApi.java:260)\n\tat cn.wps.note.controller.old.NoteController.setNoteContent(NoteController.java:303)\n\tat cn.wps.note.controller.old.NoteController$$FastClassBySpringCGLIB$$19b69b22.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)\n\tat cn.wps.note.interceptor.LogAop.around(LogAop.java:30)\n\tat sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)\n\tat cn.wps.note.controller.old.NoteController$$EnhancerBySpringCGLIB$$c46d5a0.setNoteContent(<generated>)\n\tat sun.reflect.GeneratedMethodAccessor106.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:660)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:741)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.sql.SQLException: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='\n\tat com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)\n\tat com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)\n\tat com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)\n\tat com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)\n\tat com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)\n\tat com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)\n\tat com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)\n\tat com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)\n\tat com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)\n\tat com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)\n\tat com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)\n\tat com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)\n\tat com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)\n\tat org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)\n\tat org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)\n\tat org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)\n\tat org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)\n\tat org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)\n\tat org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)\n\tat com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:108)\n\tat org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)\n\tat com.sun.proxy.$Proxy139.query(Unknown Source)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)\n\tat sun.reflect.GeneratedMethodAccessor92.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)\n\t... 80 more\n"}
+[INFO]14:31:29:968-logsmethod.py:51 >> Class Name:CreateNoteInput
+[INFO]14:31:29:972-logsmethod.py:52 >> Method Name:testCase05_datatype_2__
+[INFO]14:31:29:977-logsmethod.py:53 >> Test Description:新增便签内容，必填项数据类型校验noteid [with noteid='我是中国人']
+[STEP]14:31:29:982-test_input.py:111 >> 前置新建便签主体
+[INFO]14:31:29:987-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:31:29:992-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:29:998-apire.py:34 >> 【requests】body:{'noteId': '1716532289983_noteId'}
+[INFO]14:31:30:428-apire.py:40 >> 【response】code:200
+[INFO]14:31:30:433-apire.py:41 >> 【response】body:{"responseTime":28,"infoVersion":1,"infoUpdateTime":1716532292097}
+[STEP]14:31:30:438-test_input.py:121 >> 新建便签内容
+[INFO]14:31:30:443-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:31:30:449-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:30:454-apire.py:34 >> 【requests】body:{'noteId': '我是中国人', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:31:30:882-apire.py:40 >> 【response】code:500
+[INFO]14:31:30:887-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"org.springframework.jdbc.UncategorizedSQLException: \n### Error querying database.  Cause: java.sql.SQLException: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='\n### The error may exist in class path resource [mapping/NoteContentMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: select contentVersion, contentUpdateTime from notecontent where userId = ? and noteId = ?\n### Cause: java.sql.SQLException: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='\n; uncategorized SQLException; SQL state [HY000]; error code [1267]; Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='; nested exception is java.sql.SQLException: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)\n\tat com.sun.proxy.$Proxy98.selectOne(Unknown Source)\n\tat org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)\n\tat org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:83)\n\tat org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)\n\tat com.sun.proxy.$Proxy104.checkNoteId(Unknown Source)\n\tat cn.wps.note.api.NoteApi.setNoteContent(NoteApi.java:260)\n\tat cn.wps.note.controller.old.NoteController.setNoteContent(NoteController.java:303)\n\tat cn.wps.note.controller.old.NoteController$$FastClassBySpringCGLIB$$19b69b22.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)\n\tat cn.wps.note.interceptor.LogAop.around(LogAop.java:30)\n\tat sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)\n\tat cn.wps.note.controller.old.NoteController$$EnhancerBySpringCGLIB$$c46d5a0.setNoteContent(<generated>)\n\tat sun.reflect.GeneratedMethodAccessor106.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:660)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:741)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.sql.SQLException: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation '='\n\tat com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)\n\tat com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)\n\tat com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)\n\tat com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)\n\tat com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)\n\tat com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)\n\tat com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)\n\tat com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)\n\tat com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)\n\tat com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)\n\tat com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)\n\tat com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)\n\tat com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)\n\tat org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)\n\tat org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)\n\tat org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)\n\tat org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)\n\tat org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)\n\tat org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)\n\tat com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:108)\n\tat org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)\n\tat com.sun.proxy.$Proxy139.query(Unknown Source)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)\n\tat sun.reflect.GeneratedMethodAccessor92.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)\n\t... 80 more\n"}
+[INFO]14:31:31:725-logsmethod.py:51 >> Class Name:CreateNoteInput
+[INFO]14:31:31:730-logsmethod.py:52 >> Method Name:testCase05_datatype_3
+[INFO]14:31:31:735-logsmethod.py:53 >> Test Description:新增便签内容，必填项数据类型校验noteid [with noteid=None]
+[STEP]14:31:31:740-test_input.py:111 >> 前置新建便签主体
+[INFO]14:31:31:745-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:31:31:751-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:31:756-apire.py:34 >> 【requests】body:{'noteId': '1716532291740_noteId'}
+[INFO]14:31:37:648-logsmethod.py:51 >> Class Name:CreateNoteMajor
+[INFO]14:31:37:652-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:31:37:656-logsmethod.py:53 >> Test Description:新建便签内容主流程 
+[STEP]14:31:37:662-test_major.py:28 >> 前置新建便签主体
+[INFO]14:31:37:666-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:31:37:671-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:37:677-apire.py:34 >> 【requests】body:{'noteId': '1716532297662_noteId'}
+[INFO]14:31:38:091-apire.py:40 >> 【response】code:200
+[INFO]14:31:38:096-apire.py:41 >> 【response】body:{"responseTime":27,"infoVersion":1,"infoUpdateTime":1716532299768}
+[STEP]14:31:38:102-test_major.py:38 >> 新建便签内容
+[INFO]14:31:38:107-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:31:38:112-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:38:117-apire.py:34 >> 【requests】body:{'noteId': '1716532297662_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:31:38:598-apire.py:40 >> 【response】code:200
+[INFO]14:31:38:603-apire.py:41 >> 【response】body:{"responseTime":40,"contentVersion":1,"contentUpdateTime":1716532300272}
+[INFO]14:31:39:827-logsmethod.py:51 >> Class Name:DeleteNoteHandle
+[INFO]14:31:39:831-logsmethod.py:52 >> Method Name:testCase01_limit
+[INFO]14:31:39:836-logsmethod.py:53 >> Test Description:权限校验：未授权用户是否能够删除A用户的便签
+[STEP]14:31:39:841-test_handle.py:29 >> 前置构建一条便签数据
+[STEP]14:31:40:690-test_handle.py:35 >> 前置获取用户下的所有便签数据
+[INFO]14:31:40:696-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:31:40:700-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:41:122-apire.py:19 >> 【response】code:200
+[INFO]14:31:41:128-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532299842_noteId","createTime":1716532301935,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532301935,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532302363}]}
+[STEP]14:31:41:133-test_handle.py:41 >> 删除所有便签数据
+[INFO]14:31:41:139-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/delete
+[INFO]14:31:41:144-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=djkfjjfkdjkf', 'X-User-Key': '1204284213'}
+[INFO]14:31:41:150-apire.py:34 >> 【requests】body:{'noteId': '1716532299842_noteId'}
+[INFO]14:31:41:598-apire.py:40 >> 【response】code:401
+[INFO]14:31:41:603-apire.py:41 >> 【response】body:{"errorCode":-2010,"errorMsg":""}
+[INFO]14:31:43:539-logsmethod.py:51 >> Class Name:DeleteNoteInput
+[INFO]14:31:43:544-logsmethod.py:52 >> Method Name:testCase01_empty_str
+[INFO]14:31:43:548-logsmethod.py:53 >> Test Description:删除便签，必填项校验：noteId为空 
+[STEP]14:31:43:553-test_input.py:28 >> 前置构建一条便签数据
+[STEP]14:31:44:926-test_input.py:38 >> 前置获取用户下的所有便签数据
+[INFO]14:31:44:932-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:31:44:937-apire.py:13 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:45:490-apire.py:19 >> 【response】code:200
+[INFO]14:31:45:495-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532303554_noteId","createTime":1716532305920,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532305920,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532306548}]}
+[STEP]14:31:45:500-test_input.py:44 >> 删除所有便签数据
+[INFO]14:31:45:505-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/delete
+[INFO]14:31:45:510-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:45:516-apire.py:34 >> 【requests】body:{'noteId': ''}
+[INFO]14:31:45:912-apire.py:40 >> 【response】code:500
+[INFO]14:31:45:917-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"参数不合法！"}
+[INFO]14:31:47:214-logsmethod.py:51 >> Class Name:DeleteNoteInput
+[INFO]14:31:47:219-logsmethod.py:52 >> Method Name:testCase02_str_type_0_kkjlkjfkjdkdjkkjfkjdkjfdkjjfkjhdkjfhjdhfjdhjhfjdhjhfkdhkjfhjkjdfjkj
+[INFO]14:31:47:224-logsmethod.py:53 >> Test Description:删除便签，数据类型校验 [with noteid='kkjlkjfkjdkdjkkjfkjdkjfdkjjfkjh...jdhfjdhjhfjdhjhfkdhkjfhjkjdfjkj']
+[STEP]14:31:47:229-test_input.py:56 >> 前置构建一条便签数据
+[STEP]14:31:48:205-test_input.py:66 >> 前置获取用户下的所有便签数据
+[INFO]14:31:48:211-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:31:48:217-apire.py:13 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:48:661-apire.py:19 >> 【response】code:200
+[INFO]14:31:48:667-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532307229_noteId","createTime":1716532309409,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532309409,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532309877}]}
+[STEP]14:31:48:673-test_input.py:72 >> 删除所有便签数据
+[INFO]14:31:48:678-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/delete
+[INFO]14:31:48:684-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:48:689-apire.py:34 >> 【requests】body:{'noteId': 'kkjlkjfkjdkdjkkjfkjdkjfdkjjfkjhdkjfhjdhfjdhjhfjdhjhfkdhkjfhjkjdfjkj'}
+[INFO]14:31:49:261-apire.py:40 >> 【response】code:500
+[INFO]14:31:49:266-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"参数不合法！"}
+[INFO]14:31:50:523-logsmethod.py:51 >> Class Name:DeleteNoteInput
+[INFO]14:31:50:527-logsmethod.py:52 >> Method Name:testCase02_str_type_1__
+[INFO]14:31:50:532-logsmethod.py:53 >> Test Description:删除便签，数据类型校验 [with noteid='@#￥%……&*（']
+[STEP]14:31:50:537-test_input.py:56 >> 前置构建一条便签数据
+[STEP]14:31:51:371-test_input.py:66 >> 前置获取用户下的所有便签数据
+[INFO]14:31:51:377-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:31:51:382-apire.py:13 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:51:842-apire.py:19 >> 【response】code:200
+[INFO]14:31:51:847-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532310538_noteId","createTime":1716532312625,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532312625,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532313046}]}
+[STEP]14:31:51:852-test_input.py:72 >> 删除所有便签数据
+[INFO]14:31:51:858-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/delete
+[INFO]14:31:51:864-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:51:870-apire.py:34 >> 【requests】body:{'noteId': '@#￥%……&*（'}
+[INFO]14:31:52:506-apire.py:40 >> 【response】code:500
+[INFO]14:31:52:512-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"org.springframework.jdbc.UncategorizedSQLException: \n### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\\xEF\\xBF\\xA5%\\xE2\\x80...' for column 'noteId' at row 1\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: insert into noteinfo(userId, noteId, valid, infoVersion, createTime, infoUpdateTime)             values(?, ?, ?, 1, ?, ?)             on duplicate key update             valid = ?, infoVersion = infoVersion + 1, infoUpdateTime = ?\n### Cause: java.sql.SQLException: Incorrect string value: '\\xEF\\xBF\\xA5%\\xE2\\x80...' for column 'noteId' at row 1\n; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\\xEF\\xBF\\xA5%\\xE2\\x80...' for column 'noteId' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\\xEF\\xBF\\xA5%\\xE2\\x80...' for column 'noteId' at row 1\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)\n\tat com.sun.proxy.$Proxy98.insert(Unknown Source)\n\tat org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)\n\tat org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:58)\n\tat org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)\n\tat com.sun.proxy.$Proxy105.setValid(Unknown Source)\n\tat cn.wps.note.api.NoteApi.deleteNote(NoteApi.java:303)\n\tat cn.wps.note.service.old.NoteControllerService.deleteNote(NoteControllerService.java:184)\n\tat cn.wps.note.controller.old.NoteController.deleteNote(NoteController.java:340)\n\tat cn.wps.note.controller.old.NoteController$$FastClassBySpringCGLIB$$19b69b22.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)\n\tat cn.wps.note.interceptor.LogAop.around(LogAop.java:30)\n\tat sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)\n\tat cn.wps.note.controller.old.NoteController$$EnhancerBySpringCGLIB$$c46d5a0.deleteNote(<generated>)\n\tat sun.reflect.GeneratedMethodAccessor217.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:660)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:741)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.sql.SQLException: Incorrect string value: '\\xEF\\xBF\\xA5%\\xE2\\x80...' for column 'noteId' at row 1\n\tat com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)\n\tat com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)\n\tat com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)\n\tat com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)\n\tat com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)\n\tat com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)\n\tat com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)\n\tat com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)\n\tat com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)\n\tat com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)\n\tat com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)\n\tat com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)\n\tat com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)\n\tat org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)\n\tat org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)\n\tat org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)\n\tat org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)\n\tat org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)\n\tat sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)\n\tat com.sun.proxy.$Proxy139.update(Unknown Source)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)\n\tat sun.reflect.GeneratedMethodAccessor161.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)\n\t... 81 more\n"}
+[INFO]14:31:54:227-logsmethod.py:51 >> Class Name:DeleteNoteInput
+[INFO]14:31:54:232-logsmethod.py:52 >> Method Name:testCase02_str_type_2__
+[INFO]14:31:54:236-logsmethod.py:53 >> Test Description:删除便签，数据类型校验 [with noteid='我是中国人']
+[STEP]14:31:54:241-test_input.py:56 >> 前置构建一条便签数据
+[STEP]14:31:55:078-test_input.py:66 >> 前置获取用户下的所有便签数据
+[INFO]14:31:55:084-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:31:55:090-apire.py:13 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:55:606-apire.py:19 >> 【response】code:200
+[INFO]14:31:55:611-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532314242_noteId","createTime":1716532316334,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532316334,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532316752}]}
+[STEP]14:31:55:616-test_input.py:72 >> 删除所有便签数据
+[INFO]14:31:55:622-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/delete
+[INFO]14:31:55:628-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:55:634-apire.py:34 >> 【requests】body:{'noteId': '我是中国人'}
+[INFO]14:31:56:046-apire.py:40 >> 【response】code:500
+[INFO]14:31:56:051-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"org.springframework.jdbc.UncategorizedSQLException: \n### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\\xE6\\x88\\x91\\xE6\\x98\\xAF...' for column 'noteId' at row 1\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: insert into noteinfo(userId, noteId, valid, infoVersion, createTime, infoUpdateTime)             values(?, ?, ?, 1, ?, ?)             on duplicate key update             valid = ?, infoVersion = infoVersion + 1, infoUpdateTime = ?\n### Cause: java.sql.SQLException: Incorrect string value: '\\xE6\\x88\\x91\\xE6\\x98\\xAF...' for column 'noteId' at row 1\n; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\\xE6\\x88\\x91\\xE6\\x98\\xAF...' for column 'noteId' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\\xE6\\x88\\x91\\xE6\\x98\\xAF...' for column 'noteId' at row 1\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)\n\tat org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)\n\tat com.sun.proxy.$Proxy98.insert(Unknown Source)\n\tat org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)\n\tat org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:58)\n\tat org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)\n\tat com.sun.proxy.$Proxy105.setValid(Unknown Source)\n\tat cn.wps.note.api.NoteApi.deleteNote(NoteApi.java:303)\n\tat cn.wps.note.service.old.NoteControllerService.deleteNote(NoteControllerService.java:184)\n\tat cn.wps.note.controller.old.NoteController.deleteNote(NoteController.java:340)\n\tat cn.wps.note.controller.old.NoteController$$FastClassBySpringCGLIB$$19b69b22.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)\n\tat cn.wps.note.interceptor.LogAop.around(LogAop.java:30)\n\tat sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)\n\tat cn.wps.note.controller.old.NoteController$$EnhancerBySpringCGLIB$$c46d5a0.deleteNote(<generated>)\n\tat sun.reflect.GeneratedMethodAccessor217.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:660)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:741)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.sql.SQLException: Incorrect string value: '\\xE6\\x88\\x91\\xE6\\x98\\xAF...' for column 'noteId' at row 1\n\tat com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)\n\tat com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)\n\tat com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)\n\tat com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)\n\tat com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)\n\tat com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)\n\tat com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)\n\tat com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)\n\tat com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)\n\tat com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)\n\tat com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)\n\tat com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)\n\tat com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)\n\tat org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)\n\tat org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)\n\tat org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)\n\tat org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)\n\tat org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)\n\tat sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)\n\tat com.sun.proxy.$Proxy139.update(Unknown Source)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)\n\tat org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)\n\tat sun.reflect.GeneratedMethodAccessor161.invoke(Unknown Source)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)\n\t... 81 more\n"}
+[INFO]14:31:57:521-logsmethod.py:51 >> Class Name:DeleteNoteInput
+[INFO]14:31:57:525-logsmethod.py:52 >> Method Name:testCase02_str_type_3
+[INFO]14:31:57:530-logsmethod.py:53 >> Test Description:删除便签，数据类型校验 [with noteid=None]
+[STEP]14:31:57:535-test_input.py:56 >> 前置构建一条便签数据
+[STEP]14:31:58:375-test_input.py:66 >> 前置获取用户下的所有便签数据
+[INFO]14:31:58:380-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:31:58:386-apire.py:13 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:58:812-apire.py:19 >> 【response】code:200
+[INFO]14:31:58:817-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532317536_noteId","createTime":1716532319629,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532319629,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532320054}]}
+[STEP]14:31:58:822-test_input.py:72 >> 删除所有便签数据
+[INFO]14:31:58:828-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/delete
+[INFO]14:31:58:833-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:31:58:839-apire.py:34 >> 【requests】body:{'noteId': None}
+[INFO]14:31:59:245-apire.py:40 >> 【response】code:500
+[INFO]14:31:59:250-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"参数不合法！"}
+[INFO]14:32:00:502-logsmethod.py:51 >> Class Name:DeleteNoteMajor
+[INFO]14:32:00:507-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:32:00:511-logsmethod.py:53 >> Test Description:删除便签，主流程 
+[STEP]14:32:00:517-test_major.py:23 >> 前置构建一条便签数据
+[STEP]14:32:01:382-test_major.py:33 >> 前置获取用户下的所有便签数据
+[INFO]14:32:01:387-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:32:01:392-apire.py:13 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:01:877-apire.py:19 >> 【response】code:200
+[INFO]14:32:01:882-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532320517_noteId","createTime":1716532322625,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532322625,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532323057}]}
+[STEP]14:32:01:886-test_major.py:39 >> 删除所有便签数据
+[INFO]14:32:01:891-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/delete
+[INFO]14:32:01:896-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:01:902-apire.py:34 >> 【requests】body:{'noteId': '1716532320517_noteId'}
+[INFO]14:32:02:835-apire.py:40 >> 【response】code:200
+[INFO]14:32:02:840-apire.py:41 >> 【response】body:{"responseTime":43}
+[INFO]14:32:06:196-logsmethod.py:51 >> Class Name:GetNoteContentHandle
+[INFO]14:32:06:201-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:32:06:206-logsmethod.py:53 >> Test Description:权限校验：未授权用户是否能够查看A用户的便签内容
+[STEP]14:32:06:211-test_handle.py:32 >> 前置构建一条便签数据
+[STEP]14:32:07:062-test_handle.py:35 >> 前置获取用户下的所有便签数据
+[INFO]14:32:07:068-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:32:07:072-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:07:504-apire.py:19 >> 【response】code:200
+[INFO]14:32:07:509-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532326213_noteId","createTime":1716532328309,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532328309,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532328735}]}
+[STEP]14:32:07:515-test_handle.py:42 >> 获取用户下的所有便签内容
+[INFO]14:32:07:521-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]14:32:07:527-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=djkfjjfkdjkf', 'X-User-Key': '1204284213'}
+[INFO]14:32:07:533-apire.py:34 >> 【requests】body:{'noteIds': ['1716532326213_noteId']}
+[INFO]14:32:07:974-apire.py:40 >> 【response】code:401
+[INFO]14:32:07:980-apire.py:41 >> 【response】body:{"errorCode":-2010,"errorMsg":""}
+[INFO]14:32:09:325-logsmethod.py:51 >> Class Name:GetNoteContentInput
+[INFO]14:32:09:330-logsmethod.py:52 >> Method Name:testCase01_empty_list
+[INFO]14:32:09:334-logsmethod.py:53 >> Test Description:获取便签内容，必填字段校验, noteids 为 [''] 
+[STEP]14:32:09:339-test_input.py:31 >> 前置构建一条便签数据
+[STEP]14:32:10:196-test_input.py:38 >> 前置获取用户下的所有便签数据
+[INFO]14:32:10:201-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:32:10:206-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:10:660-apire.py:19 >> 【response】code:200
+[INFO]14:32:10:666-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532329340_noteId","createTime":1716532331451,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532331451,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532331875}]}
+[STEP]14:32:10:670-test_input.py:45 >> 获取用户下的所有便签内容
+[INFO]14:32:10:675-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]14:32:10:681-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:10:686-apire.py:34 >> 【requests】body:{'noteIds': ['']}
+[INFO]14:32:11:112-apire.py:40 >> 【response】code:200
+[INFO]14:32:11:118-apire.py:41 >> 【response】body:{"responseTime":33,"noteBodies":[]}
+[INFO]14:32:12:770-logsmethod.py:51 >> Class Name:GetNoteContentInput
+[INFO]14:32:12:775-logsmethod.py:52 >> Method Name:testCase02_empty_dict
+[INFO]14:32:12:779-logsmethod.py:53 >> Test Description:获取便签内容，必填字段校验, noteids 为 [''] 
+[STEP]14:32:12:784-test_input.py:55 >> 前置构建一条便签数据
+[STEP]14:32:15:866-test_input.py:62 >> 前置获取用户下的所有便签数据
+[INFO]14:32:15:871-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:32:15:877-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:16:398-apire.py:19 >> 【response】code:200
+[INFO]14:32:16:404-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532332785_noteId","createTime":1716532336850,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532336850,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532337481}]}
+[STEP]14:32:16:408-test_input.py:69 >> 获取用户下的所有便签内容
+[INFO]14:32:16:414-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]14:32:16:419-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:16:425-apire.py:34 >> 【requests】body:{'noteIds': {}}
+[INFO]14:32:16:803-apire.py:40 >> 【response】code:500
+[INFO]14:32:16:808-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":""}
+[INFO]14:32:18:178-logsmethod.py:51 >> Class Name:GetNoteContentInput
+[INFO]14:32:18:183-logsmethod.py:52 >> Method Name:testCase03_empty_list
+[INFO]14:32:18:187-logsmethod.py:53 >> Test Description:获取便签内容，必填字段校验, noteids 为 [''] 
+[STEP]14:32:18:192-test_input.py:79 >> 前置构建一条便签数据
+[STEP]14:32:19:080-test_input.py:86 >> 前置获取用户下的所有便签数据
+[INFO]14:32:19:085-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:32:19:090-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:19:541-apire.py:19 >> 【response】code:200
+[INFO]14:32:19:547-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532338193_noteId","createTime":1716532340288,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532340288,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532340747}]}
+[STEP]14:32:19:552-test_input.py:93 >> 获取用户下的所有便签内容
+[INFO]14:32:19:557-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]14:32:19:562-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:19:567-apire.py:34 >> 【requests】body:{'noteIds': []}
+[INFO]14:32:20:039-apire.py:40 >> 【response】code:500
+[INFO]14:32:20:045-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"参数不合法！"}
+[INFO]14:32:21:441-logsmethod.py:51 >> Class Name:GetNoteContentInput
+[INFO]14:32:21:445-logsmethod.py:52 >> Method Name:testCase04_list
+[INFO]14:32:21:450-logsmethod.py:53 >> Test Description:获取便签内容，必填字段校验, noteids 为 [''] 
+[STEP]14:32:21:454-test_input.py:103 >> 前置构建一条便签数据
+[STEP]14:32:22:410-test_input.py:110 >> 前置获取用户下的所有便签数据
+[INFO]14:32:22:415-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:32:22:420-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:23:234-apire.py:19 >> 【response】code:200
+[INFO]14:32:23:239-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532341455_noteId","createTime":1716532343557,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532343557,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532344026}]}
+[STEP]14:32:23:245-test_input.py:117 >> 获取用户下的所有便签内容
+[INFO]14:32:23:250-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]14:32:23:255-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:23:262-apire.py:34 >> 【requests】body:{'noteIds': [234, [123, 123]]}
+[INFO]14:32:23:860-apire.py:40 >> 【response】code:500
+[INFO]14:32:23:865-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":""}
+[INFO]14:32:25:814-logsmethod.py:51 >> Class Name:GetNoteContentInput
+[INFO]14:32:25:818-logsmethod.py:52 >> Method Name:testCase05_list_type_0
+[INFO]14:32:25:823-logsmethod.py:53 >> Test Description:获取便签内容，数据类型校验 [with noteids=None]
+[STEP]14:32:25:828-test_input.py:130 >> 前置构建一条便签数据
+[STEP]14:32:26:654-test_input.py:137 >> 前置获取用户下的所有便签数据
+[INFO]14:32:26:659-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:32:26:664-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:27:079-apire.py:19 >> 【response】code:200
+[INFO]14:32:27:084-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532345829_noteId","createTime":1716532347913,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532347913,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532348334}]}
+[STEP]14:32:27:089-test_input.py:145 >> 获取用户下的所有便签内容
+[INFO]14:32:27:095-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]14:32:27:100-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:27:105-apire.py:34 >> 【requests】body:{'noteIds': None}
+[INFO]14:32:27:495-apire.py:40 >> 【response】code:500
+[INFO]14:32:27:500-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":"参数不合法！"}
+[INFO]14:32:28:774-logsmethod.py:51 >> Class Name:GetNoteContentInput
+[INFO]14:32:28:779-logsmethod.py:52 >> Method Name:testCase05_list_type_1_None
+[INFO]14:32:28:783-logsmethod.py:53 >> Test Description:获取便签内容，数据类型校验 [with noteids='None']
+[STEP]14:32:28:789-test_input.py:130 >> 前置构建一条便签数据
+[STEP]14:32:29:744-test_input.py:137 >> 前置获取用户下的所有便签数据
+[INFO]14:32:29:749-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:32:29:754-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:30:176-apire.py:19 >> 【response】code:200
+[INFO]14:32:30:182-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532348790_noteId","createTime":1716532350977,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532350977,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532351397}]}
+[STEP]14:32:30:186-test_input.py:145 >> 获取用户下的所有便签内容
+[INFO]14:32:30:192-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]14:32:30:197-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:30:203-apire.py:34 >> 【requests】body:{'noteIds': 'None'}
+[INFO]14:32:30:587-apire.py:40 >> 【response】code:500
+[INFO]14:32:30:593-apire.py:41 >> 【response】body:{"errorCode":-7,"errorMsg":""}
+[INFO]14:32:31:902-logsmethod.py:51 >> Class Name:GetNoteContentMajor
+[INFO]14:32:31:907-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:32:31:911-logsmethod.py:53 >> Test Description:获取便签内容，主流程 
+[STEP]14:32:31:916-test_major.py:26 >> 前置构建一条便签数据
+[STEP]14:32:34:278-test_major.py:33 >> 前置获取用户下的所有便签数据
+[INFO]14:32:34:283-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:32:34:288-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:35:044-apire.py:19 >> 【response】code:200
+[INFO]14:32:35:049-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532351916_noteId","createTime":1716532355337,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532355337,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532355899}]}
+[STEP]14:32:35:053-test_major.py:40 >> 获取用户下的所有便签内容
+[INFO]14:32:35:059-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]14:32:35:064-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:35:070-apire.py:34 >> 【requests】body:{'noteIds': ['1716532351916_noteId']}
+[INFO]14:32:35:480-apire.py:40 >> 【response】code:200
+[INFO]14:32:35:486-apire.py:41 >> 【response】body:{"responseTime":31,"noteBodies":[{"summary":"test","noteId":"1716532351916_noteId","infoNoteId":"1716532351916_noteId","bodyType":0,"body":"test","contentVersion":1,"contentUpdateTime":1716532355899,"title":"test","valid":1}]}
+[INFO]14:32:36:756-logsmethod.py:51 >> Class Name:GetNotePageHandle
+[INFO]14:32:36:760-logsmethod.py:52 >> Method Name:testCase01_startindex
+[INFO]14:32:36:765-logsmethod.py:53 >> Test Description:获取首页便签，startindex约束场景校验，存在2条便签数据，startindex的值为1
+[STEP]14:32:36:770-test_handle.py:67 >> 前置构建2条便签数据
+[STEP]14:32:38:558-test_handle.py:69 >> 获取首页便签
+[INFO]14:32:38:563-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/1/rows/10/notes
+[INFO]14:32:38:568-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:39:128-apire.py:19 >> 【response】code:200
+[INFO]14:32:39:133-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532356770_noteId","createTime":1716532358929,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532358929,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532359333}]}
+[INFO]14:32:40:851-logsmethod.py:51 >> Class Name:GetNotePageHandle
+[INFO]14:32:40:856-logsmethod.py:52 >> Method Name:testCase02_startindex
+[INFO]14:32:40:860-logsmethod.py:53 >> Test Description:获取首页便签，startindex约束场景校验，存在2条便签数据，startindex的值为0
+[STEP]14:32:40:864-test_handle.py:97 >> 前置构建2条便签数据
+[STEP]14:32:42:771-test_handle.py:99 >> 获取首页便签
+[INFO]14:32:42:775-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/10/notes
+[INFO]14:32:42:780-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:43:465-apire.py:19 >> 【response】code:200
+[INFO]14:32:43:470-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532361704_noteId","createTime":1716532363790,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532363790,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532364445},{"noteId":"1716532360865_noteId","createTime":1716532362984,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532362984,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532363391}]}
+[INFO]14:32:46:397-logsmethod.py:51 >> Class Name:GetNotePageHandle
+[INFO]14:32:46:401-logsmethod.py:52 >> Method Name:testCase03_rows
+[INFO]14:32:46:406-logsmethod.py:53 >> Test Description:获取首页便签，rows约束场景校验，存在1条便签数据，rows的值为0
+[STEP]14:32:46:410-test_handle.py:111 >> 前置构建1条便签数据
+[STEP]14:32:47:246-test_handle.py:113 >> 获取首页便签
+[INFO]14:32:47:251-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/0/notes
+[INFO]14:32:47:256-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:47:696-apire.py:19 >> 【response】code:200
+[INFO]14:32:47:701-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532366411_noteId","createTime":1716532368490,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532368490,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532368927}]}
+[INFO]14:32:48:996-logsmethod.py:51 >> Class Name:GetNotePageHandle
+[INFO]14:32:49:001-logsmethod.py:52 >> Method Name:testCase04_rows
+[INFO]14:32:49:005-logsmethod.py:53 >> Test Description:获取首页便签，rows约束场景校验，存在2条便签数据，rows的值为1
+[STEP]14:32:49:010-test_handle.py:141 >> 前置构建2条便签数据
+[STEP]14:32:50:730-test_handle.py:143 >> 获取首页便签
+[INFO]14:32:50:735-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/1/notes
+[INFO]14:32:50:740-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:51:162-apire.py:19 >> 【response】code:200
+[INFO]14:32:51:167-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532369828_noteId","createTime":1716532371975,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532371975,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532372408}]}
+[INFO]14:32:53:756-logsmethod.py:51 >> Class Name:GetNotePageHandle
+[INFO]14:32:53:761-logsmethod.py:52 >> Method Name:testCase05_statuslimit
+[INFO]14:32:53:766-logsmethod.py:53 >> Test Description:状态限制：被清空的便签状态限制场景校验，清空便签数据后返回便签列表为空
+[STEP]14:32:53:771-test_handle.py:171 >> 前置构建1条便签数据
+[STEP]14:32:55:506-test_handle.py:173 >> 删除并清空回收站便签数据
+[STEP]14:32:57:373-test_handle.py:175 >> 获取首页便签
+[INFO]14:32:57:378-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/10/notes
+[INFO]14:32:57:383-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:32:57:830-apire.py:19 >> 【response】code:200
+[INFO]14:32:57:836-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[]}
+[INFO]14:32:58:700-logsmethod.py:51 >> Class Name:GetNotePageHandle
+[INFO]14:32:58:705-logsmethod.py:52 >> Method Name:testCase06_nums
+[INFO]14:32:58:709-logsmethod.py:53 >> Test Description:不同的处理数量校验：存在2条便签数据，则返回两条便签
+[STEP]14:32:58:714-test_handle.py:187 >> 前置构建2条便签数据
+[STEP]14:33:00:448-test_handle.py:190 >> 获取首页便签
+[INFO]14:33:00:453-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/10/notes
+[INFO]14:33:00:458-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:33:00:876-apire.py:19 >> 【response】code:200
+[INFO]14:33:00:881-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532379559_noteId","createTime":1716532381660,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532381660,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532382129},{"noteId":"1716532378715_noteId","createTime":1716532380832,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532380832,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532381240}]}
+[INFO]14:33:02:942-logsmethod.py:51 >> Class Name:GetNotePageHandle
+[INFO]14:33:02:946-logsmethod.py:52 >> Method Name:testCase07_nums
+[INFO]14:33:02:951-logsmethod.py:53 >> Test Description:不同的处理数量校验：存在0条便签数据，则返回0条便签
+[STEP]14:33:02:956-test_handle.py:202 >> 获取首页便签
+[INFO]14:33:02:961-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/10/notes
+[INFO]14:33:02:966-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:33:03:771-apire.py:19 >> 【response】code:200
+[INFO]14:33:03:776-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[]}
+[INFO]14:33:05:204-logsmethod.py:51 >> Class Name:GetNotePageHandle
+[INFO]14:33:05:208-logsmethod.py:52 >> Method Name:testCase08_limits
+[INFO]14:33:05:212-logsmethod.py:53 >> Test Description:权限校验：未授权用户是否能够查看A用户的便签
+[STEP]14:33:05:218-test_handle.py:214 >> 前置构建1条便签数据
+[STEP]14:33:06:492-test_handle.py:216 >> 获取首页便签
+[INFO]14:33:06:497-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284213/home/startindex/0/rows/10/notes
+[INFO]14:33:06:502-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=djkfjjfkdjkf', 'X-User-Key': '1204284213'}
+[INFO]14:33:06:896-apire.py:19 >> 【response】code:401
+[INFO]14:33:06:901-apire.py:20 >> 【response】body:{"errorCode":-2010,"errorMsg":""}
+[INFO]14:33:08:181-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:08:186-logsmethod.py:52 >> Method Name:testCase01_startindex
+[INFO]14:33:08:190-logsmethod.py:53 >> Test Description:获取首页便签，必填项校验: startindex为 空 
+[STEP]14:33:08:195-test_input.py:50 >> 前置构建1条便签数据
+[STEP]14:33:09:005-test_input.py:52 >> 获取首页便签
+[INFO]14:33:09:010-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/None/rows/10/notes
+[INFO]14:33:09:015-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:09:390-apire.py:19 >> 【response】code:500
+[INFO]14:33:09:395-apire.py:20 >> 【response】body:{"errorCode":-7,"errorMsg":"参数类型错误！"}
+[INFO]14:33:10:644-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:10:648-logsmethod.py:52 >> Method Name:testCase02_rows
+[INFO]14:33:10:653-logsmethod.py:53 >> Test Description:获取首页便签，必填项校验: rows为 空 
+[STEP]14:33:10:658-test_input.py:61 >> 前置构建1条便签数据
+[STEP]14:33:11:557-test_input.py:63 >> 获取首页便签
+[INFO]14:33:11:563-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/None/notes
+[INFO]14:33:11:567-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:11:958-apire.py:19 >> 【response】code:500
+[INFO]14:33:11:963-apire.py:20 >> 【response】body:{"errorCode":-7,"errorMsg":"参数类型错误！"}
+[INFO]14:33:13:808-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:13:812-logsmethod.py:52 >> Method Name:testCase03_userid
+[INFO]14:33:13:817-logsmethod.py:53 >> Test Description:获取首页便签，必填项校验: userid为 空 
+[STEP]14:33:13:821-test_input.py:72 >> 前置构建1条便签数据
+[STEP]14:33:15:035-test_input.py:74 >> 获取首页便签
+[INFO]14:33:15:040-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user//home/startindex/0/rows/10/notes
+[INFO]14:33:15:045-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:15:585-apire.py:19 >> 【response】code:404
+[INFO]14:33:15:590-apire.py:20 >> 【response】body:{"timestamp":"2024-05-24T06:33:17.264+0000","status":404,"error":"Not Found","message":"No message available","path":"/v3/notesvr/user//home/startindex/0/rows/10/notes"}
+[INFO]14:33:16:987-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:16:991-logsmethod.py:52 >> Method Name:testCase04_sid
+[INFO]14:33:16:996-logsmethod.py:53 >> Test Description:获取首页便签，必填项校验: sid为 空 
+[STEP]14:33:17:001-test_input.py:84 >> 前置构建1条便签数据
+[STEP]14:33:17:909-test_input.py:86 >> 获取首页便签
+[INFO]14:33:17:914-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/10/notes
+[INFO]14:33:17:919-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid='}
+[INFO]14:33:18:341-apire.py:19 >> 【response】code:401
+[INFO]14:33:18:346-apire.py:20 >> 【response】body:{"errorCode":-2010,"errorMsg":""}
+[INFO]14:33:19:663-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:19:667-logsmethod.py:52 >> Method Name:testCase05_sid
+[INFO]14:33:19:672-logsmethod.py:53 >> Test Description:获取首页便签，必填项校验: sid错误 
+[STEP]14:33:19:676-test_input.py:96 >> 前置构建1条便签数据
+[STEP]14:33:20:578-test_input.py:98 >> 获取首页便签
+[INFO]14:33:20:584-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/10/notes
+[INFO]14:33:20:589-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=12312387468687'}
+[INFO]14:33:20:980-apire.py:19 >> 【response】code:401
+[INFO]14:33:20:985-apire.py:20 >> 【response】body:{"errorCode":-2010,"errorMsg":""}
+[INFO]14:33:22:424-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:22:429-logsmethod.py:52 >> Method Name:testCase06_type_0
+[INFO]14:33:22:433-logsmethod.py:53 >> Test Description:获取首页便签，必填项类型校验: startindex为int类型 [with startindex=99999999999999999999]
+[STEP]14:33:22:438-test_input.py:109 >> 前置构建1条便签数据
+[STEP]14:33:23:703-test_input.py:111 >> 获取首页便签
+[INFO]14:33:23:708-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/99999999999999999999/rows/10/notes
+[INFO]14:33:23:714-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:24:461-apire.py:19 >> 【response】code:500
+[INFO]14:33:24:467-apire.py:20 >> 【response】body:{"errorCode":-7,"errorMsg":"参数类型错误！"}
+[INFO]14:33:25:959-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:25:963-logsmethod.py:52 >> Method Name:testCase06_type_1
+[INFO]14:33:25:967-logsmethod.py:53 >> Test Description:获取首页便签，必填项类型校验: startindex为int类型 [with startindex=0]
+[STEP]14:33:25:972-test_input.py:109 >> 前置构建1条便签数据
+[STEP]14:33:27:814-test_input.py:111 >> 获取首页便签
+[INFO]14:33:27:819-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/10/notes
+[INFO]14:33:27:824-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:28:259-apire.py:19 >> 【response】code:200
+[INFO]14:33:28:264-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532405973_noteId","createTime":1716532408054,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532408054,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532409488}]}
+[INFO]14:33:29:620-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:29:625-logsmethod.py:52 >> Method Name:testCase06_type_2
+[INFO]14:33:29:629-logsmethod.py:53 >> Test Description:获取首页便签，必填项类型校验: startindex为int类型 [with startindex=-1]
+[STEP]14:33:29:635-test_input.py:109 >> 前置构建1条便签数据
+[STEP]14:33:31:498-test_input.py:111 >> 获取首页便签
+[INFO]14:33:31:504-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/-1/rows/10/notes
+[INFO]14:33:31:509-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:31:944-apire.py:19 >> 【response】code:200
+[INFO]14:33:31:950-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532409635_noteId","createTime":1716532412764,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532412764,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532413180}]}
+[INFO]14:33:34:082-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:34:086-logsmethod.py:52 >> Method Name:testCase06_type_3
+[INFO]14:33:34:091-logsmethod.py:53 >> Test Description:获取首页便签，必填项类型校验: startindex为int类型 [with startindex=2147483648]
+[STEP]14:33:34:097-test_input.py:109 >> 前置构建1条便签数据
+[STEP]14:33:35:312-test_input.py:111 >> 获取首页便签
+[INFO]14:33:35:319-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/2147483648/rows/10/notes
+[INFO]14:33:35:326-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:35:735-apire.py:19 >> 【response】code:500
+[INFO]14:33:35:741-apire.py:20 >> 【response】body:{"errorCode":-7,"errorMsg":"参数类型错误！"}
+[INFO]14:33:36:954-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:36:958-logsmethod.py:52 >> Method Name:testCase06_type_4
+[INFO]14:33:36:963-logsmethod.py:53 >> Test Description:获取首页便签，必填项类型校验: startindex为int类型 [with startindex=-2147483649]
+[STEP]14:33:36:968-test_input.py:109 >> 前置构建1条便签数据
+[STEP]14:33:37:803-test_input.py:111 >> 获取首页便签
+[INFO]14:33:37:808-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/-2147483649/rows/10/notes
+[INFO]14:33:37:814-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:38:208-apire.py:19 >> 【response】code:500
+[INFO]14:33:38:214-apire.py:20 >> 【response】body:{"errorCode":-7,"errorMsg":"参数类型错误！"}
+[INFO]14:33:39:490-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:39:494-logsmethod.py:52 >> Method Name:testCase06_type_5
+[INFO]14:33:39:499-logsmethod.py:53 >> Test Description:获取首页便签，必填项类型校验: startindex为int类型 [with startindex=1.555]
+[STEP]14:33:39:504-test_input.py:109 >> 前置构建1条便签数据
+[STEP]14:33:40:344-test_input.py:111 >> 获取首页便签
+[INFO]14:33:40:350-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/1.555/rows/10/notes
+[INFO]14:33:40:355-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:40:751-apire.py:19 >> 【response】code:500
+[INFO]14:33:40:756-apire.py:20 >> 【response】body:{"errorCode":-7,"errorMsg":"参数类型错误！"}
+[INFO]14:33:42:159-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:42:164-logsmethod.py:52 >> Method Name:testCase06_type_6_1
+[INFO]14:33:42:168-logsmethod.py:53 >> Test Description:获取首页便签，必填项类型校验: startindex为int类型 [with startindex='1']
+[STEP]14:33:42:172-test_input.py:109 >> 前置构建1条便签数据
+[STEP]14:33:43:589-test_input.py:111 >> 获取首页便签
+[INFO]14:33:43:595-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/1/rows/10/notes
+[INFO]14:33:43:600-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:44:198-apire.py:19 >> 【response】code:200
+[INFO]14:33:44:204-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[]}
+[INFO]14:33:46:451-logsmethod.py:51 >> Class Name:GetNotePageInput
+[INFO]14:33:46:455-logsmethod.py:52 >> Method Name:testCase06_type_7_
+[INFO]14:33:46:460-logsmethod.py:53 >> Test Description:获取首页便签，必填项类型校验: startindex为int类型 [with startindex='']
+[STEP]14:33:46:464-test_input.py:109 >> 前置构建1条便签数据
+[STEP]14:33:47:341-test_input.py:111 >> 获取首页便签
+[INFO]14:33:47:347-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex//rows/10/notes
+[INFO]14:33:47:352-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32'}
+[INFO]14:33:47:761-apire.py:19 >> 【response】code:404
+[INFO]14:33:47:767-apire.py:20 >> 【response】body:{"timestamp":"2024-05-24T06:33:49.437+0000","status":404,"error":"Not Found","message":"No message available","path":"/v3/notesvr/user/1204284210/home/startindex//rows/10/notes"}
+[INFO]14:33:48:993-logsmethod.py:51 >> Class Name:GetNotePageMajor
+[INFO]14:33:48:997-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:33:49:001-logsmethod.py:53 >> Test Description:获取首页便签，主流程 
+[STEP]14:33:49:007-test_major.py:25 >> 前置构建一条便签数据
+[STEP]14:33:49:870-test_major.py:27 >> 获取首页便签
+[INFO]14:33:49:875-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:33:49:880-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:33:50:309-apire.py:19 >> 【response】code:200
+[INFO]14:33:50:314-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532429007_noteId","createTime":1716532431111,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532431111,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532431545}]}
+[INFO]14:34:07:790-logsmethod.py:51 >> Class Name:CreateCalendarMajor
+[INFO]14:34:07:795-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:34:07:799-logsmethod.py:53 >> Test Description:新建日历便签内容主流程 
+[STEP]14:34:07:804-test_major.py:24 >> 前置新建日历便签主体
+[INFO]14:34:07:810-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:34:07:815-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:07:820-apire.py:34 >> 【requests】body:{'noteId': '1716532447805_noteId', 'star': 0, 'remindTime': 1714708259, 'remindType': 1}
+[INFO]14:34:08:321-apire.py:40 >> 【response】code:200
+[INFO]14:34:08:327-apire.py:41 >> 【response】body:{"responseTime":27,"infoVersion":1,"infoUpdateTime":1716532449958}
+[STEP]14:34:08:331-test_major.py:38 >> 新建日历便签内容
+[INFO]14:34:08:336-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:34:08:342-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:08:346-apire.py:34 >> 【requests】body:{'noteId': '1716532447805_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:34:08:769-apire.py:40 >> 【response】code:200
+[INFO]14:34:08:774-apire.py:41 >> 【response】body:{"responseTime":28,"contentVersion":1,"contentUpdateTime":1716532450444}
+[INFO]14:34:09:626-logsmethod.py:51 >> Class Name:GetCalendarMajor
+[INFO]14:34:09:630-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:34:09:634-logsmethod.py:53 >> Test Description:查看日历下便签主流程 
+[STEP]14:34:09:640-test_major.py:23 >> 前置构建一条日历便签
+[STEP]14:34:10:558-test_major.py:25 >> 查看日历下便签
+[INFO]14:34:10:563-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/web/getnotes/remind
+[INFO]14:34:10:568-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:10:573-apire.py:34 >> 【requests】body:{'remindStartTime': 1714535459, 'remindEndTime': 1714967459, 'startIndex': 0, 'rows': 10}
+[INFO]14:34:11:028-apire.py:40 >> 【response】code:200
+[INFO]14:34:11:033-apire.py:41 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716020372891_noteId","createTime":1716020372628,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716020372628,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716020372718},{"noteId":"1716020459134_noteId","createTime":1716020458834,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716020458834,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716020458915},{"noteId":"1716022660184_noteId","createTime":1716022660467,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716022660467,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716022661158},{"noteId":"1716022956090_noteId","createTime":1716022956192,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716022956192,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716022956304},{"noteId":"1716023054297_noteId","createTime":1716023054580,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023054580,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023054700},{"noteId":"1716023080934_noteId","createTime":1716023081054,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023081054,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023081244},{"noteId":"1716023151291_noteId","createTime":1716023151644,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023151644,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023151750},{"noteId":"1716023260213_noteId","createTime":1716023260630,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023260630,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023261017},{"noteId":"1716023628185_noteId","createTime":1716023628292,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023628292,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023628576},{"noteId":"1716023750312_noteId","createTime":1716023750496,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716023750496,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716023750674}]}
+[INFO]14:34:11:969-logsmethod.py:51 >> Class Name:CreateNoteMajor
+[INFO]14:34:11:974-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:34:11:978-logsmethod.py:53 >> Test Description:新建便签内容主流程 
+[STEP]14:34:11:983-test_major.py:28 >> 前置新建便签主体
+[INFO]14:34:11:988-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:34:11:994-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:11:999-apire.py:34 >> 【requests】body:{'noteId': '1716532451984_noteId'}
+[INFO]14:34:12:838-apire.py:40 >> 【response】code:200
+[INFO]14:34:12:843-apire.py:41 >> 【response】body:{"responseTime":35,"infoVersion":1,"infoUpdateTime":1716532454400}
+[STEP]14:34:12:848-test_major.py:38 >> 新建便签内容
+[INFO]14:34:12:853-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:34:12:858-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:12:863-apire.py:34 >> 【requests】body:{'noteId': '1716532451984_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:34:13:558-apire.py:40 >> 【response】code:200
+[INFO]14:34:13:563-apire.py:41 >> 【response】body:{"responseTime":31,"contentVersion":1,"contentUpdateTime":1716532455236}
+[INFO]14:34:15:593-logsmethod.py:51 >> Class Name:DeleteNoteMajor
+[INFO]14:34:15:600-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:34:15:605-logsmethod.py:53 >> Test Description:删除便签，主流程 
+[STEP]14:34:15:612-test_major.py:23 >> 前置构建一条便签数据
+[STEP]14:34:16:541-test_major.py:33 >> 前置获取用户下的所有便签数据
+[INFO]14:34:16:547-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:34:16:552-apire.py:13 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:17:002-apire.py:19 >> 【response】code:200
+[INFO]14:34:17:007-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532455613_noteId","createTime":1716532457721,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532457721,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532458208}]}
+[STEP]14:34:17:012-test_major.py:39 >> 删除所有便签数据
+[INFO]14:34:17:017-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/delete
+[INFO]14:34:17:022-apire.py:29 >> 【requests】headers:{'Content-Type': 'application/json', 'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:17:027-apire.py:34 >> 【requests】body:{'noteId': '1716532455613_noteId'}
+[INFO]14:34:17:469-apire.py:40 >> 【response】code:200
+[INFO]14:34:17:475-apire.py:41 >> 【response】body:{"responseTime":31}
+[INFO]14:34:18:445-logsmethod.py:51 >> Class Name:GetNoteContentMajor
+[INFO]14:34:18:450-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:34:18:454-logsmethod.py:53 >> Test Description:获取便签内容，主流程 
+[STEP]14:34:18:460-test_major.py:26 >> 前置构建一条便签数据
+[STEP]14:34:19:348-test_major.py:33 >> 前置获取用户下的所有便签数据
+[INFO]14:34:19:353-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:34:19:359-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:19:763-apire.py:19 >> 【response】code:200
+[INFO]14:34:19:769-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532458460_noteId","createTime":1716532460572,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532460572,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532461030}]}
+[STEP]14:34:19:773-test_major.py:40 >> 获取用户下的所有便签内容
+[INFO]14:34:19:778-apire.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]14:34:19:784-apire.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:19:789-apire.py:34 >> 【requests】body:{'noteIds': ['1716532458460_noteId']}
+[INFO]14:34:20:211-apire.py:40 >> 【response】code:200
+[INFO]14:34:20:216-apire.py:41 >> 【response】body:{"responseTime":23,"noteBodies":[{"summary":"test","noteId":"1716532458460_noteId","infoNoteId":"1716532458460_noteId","bodyType":0,"body":"test","contentVersion":1,"contentUpdateTime":1716532461030,"title":"test","valid":1}]}
+[INFO]14:34:21:536-logsmethod.py:51 >> Class Name:GetNotePageMajor
+[INFO]14:34:21:541-logsmethod.py:52 >> Method Name:testCase01_major
+[INFO]14:34:21:546-logsmethod.py:53 >> Test Description:获取首页便签，主流程 
+[STEP]14:34:21:550-test_major.py:25 >> 前置构建一条便签数据
+[STEP]14:34:22:610-test_major.py:27 >> 获取首页便签
+[INFO]14:34:22:615-apire.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]14:34:22:620-apire.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:34:23:244-apire.py:19 >> 【response】code:200
+[INFO]14:34:23:249-apire.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716532461551_noteId","createTime":1716532463639,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716532463639,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716532464241}]}
